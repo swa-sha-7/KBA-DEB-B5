@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Lending Manager</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-rose-100 text-gray-800 p-6">
+    <div class="max-w-3xl mx-auto bg-white rounded-xl shadow-lg p-6">
+        <h1 class="text-2xl font-bold mb-6 text-center">Book Lending Manager</h1>
+
+        <div class="mb-6">
+            <h2 class="text-xl font-semibold mb-2">Add New Book</h2>
+            <div class="flex flex-col sm:flex-row gap-2">
+                <input type="text" id="bookTitle" placeholder="Book Title" class="flex-1 p-2 border rounded">
+                <input type="text" id="bookAuthor" placeholder="Author" class="flex-1 p-2 border rounded">
+                <button onclick="addBook()" class="bg-rose-500 text-white px-4 py-2 rounded">Add</button>
+            </div>
+        </div>
+
+        <div class="mb-6">
+            <h2 class="text-xl font-semibold mb-2">Available Books</h2>
+            <ul id="availableBooks" class="space-y-2"></ul>
+        </div>
+
+        <div>
+            <h2 class="text-xl font-semibold mb-2">Issued Books</h2>
+            <ul id="issuedBooks" class="space-y-2"></ul>
+        </div>
+    </div>
+
+<script>
+    let books = [];
+    let issuedBooks = [];
+
+    function addBook() {
+        const title = document.getElementById('bookTitle').value.trim();
+        const author = document.getElementById('bookAuthor').value.trim();
+
+        if (title && author) {
+            books.push({ title, author });
+            document.getElementById('bookTitle').value = '';
+            document.getElementById('bookAuthor').value = '';
+            renderBooks();
+        } else {
+            alert("Please enter both title and author");
+        }
+    }
+
+    function renderBooks() {
+        const availableList = document.getElementById('availableBooks');
+        availableList.innerHTML = '';
+
+        books.forEach((book, index) => {
+            const li = document.createElement('li');
+            li.className = "p-3 flex justify-between items-center";
+
+            const text = document.createElement('span');
+            text.textContent = `${book.title} by ${book.author}`;
+            li.appendChild(text);
+
+            const btnGroup = document.createElement('div');
+            btnGroup.className = "flex gap-2";
+
+            const issueBtn = document.createElement('button');
+            issueBtn.textContent = 'Issue';
+            issueBtn.className = "bg-pink-400 text-white px-3 py-1 rounded";
+            issueBtn.onclick = () => issueBook(index);
+
+            const delBtn = document.createElement('button');
+            delBtn.textContent = 'Delete';
+            delBtn.className = "bg-pink-400 text-white px-3 py-1 rounded";
+            delBtn.onclick = () => deleteBook(index);
+
+            btnGroup.appendChild(issueBtn);
+            btnGroup.appendChild(delBtn);
+            li.appendChild(btnGroup);
+
+            availableList.appendChild(li);
+        });
+        renderIssuedBooks();
+    }
+
+    function issueBook(index) {
+        const userName = prompt("Enter the name of the person:");
+        if (userName) {
+            const book = books.splice(index, 1)[0];
+            issuedBooks.push({ ...book, user: userName });
+            renderBooks();
+        }
+    }
+
+    function renderIssuedBooks() {
+        const issuedList = document.getElementById('issuedBooks');
+        issuedList.innerHTML = '';
+
+        issuedBooks.forEach((book, index) => {
+            const li = document.createElement('li');
+            li.className = "p-3 flex justify-between items-center";
+
+            const text = document.createElement('span');
+            text.textContent = `${book.title} by ${book.author} - Issued to ${book.user}`;
+            li.appendChild(text);
+
+            const returnBtn = document.createElement('button');
+            returnBtn.textContent = 'Return';
+            returnBtn.className = "bg-pink-400 text-white px-3 py-1 rounded";
+            returnBtn.onclick = () => returnBook(index);
+
+            li.appendChild(returnBtn);
+            issuedList.appendChild(li);
+        });
+    }
+
+    function returnBook(index) {
+        const book = issuedBooks.splice(index, 1)[0];
+        books.push({ title: book.title, author: book.author });
+        renderBooks();
+    }
+
+    function deleteBook(index) {
+        books.splice(index, 1);
+        renderBooks();
+    }
+</script>
+</body>
+</html>
