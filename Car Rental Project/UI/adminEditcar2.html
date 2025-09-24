@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Edit Car</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white font-sans">
+
+  <!-- Navbar -->
+  <nav class="bg-gray-900 px-6 py-4 flex justify-between items-center shadow">
+    <h1 class="text-2xl font-bold text-purple-400">Admin Dashboard</h1>
+    <ul class="flex space-x-6 text-sm font-medium">
+      <li><a href="/dashboard.html" class="hover:text-purple-400 transition">Dashboard</a></li>
+      <li><a href="/add-car.html" class="hover:text-purple-400 transition">Add Car</a></li>
+      <li><a href="/edit-cars.html" class="hover:text-purple-400 transition">Edit Cars</a></li>
+      <li><a href="/manage-users.html" class="hover:text-purple-400 transition">Users</a></li>
+      <li><a href="/settings.html" class="hover:text-purple-400 transition">Settings</a></li>
+      <li><a href="/logout" class="hover:text-purple-400 transition">Logout</a></li>
+    </ul>
+  </nav>
+
+  <main class="max-w-3xl mx-auto px-6 py-10">
+
+    <h2 class="text-3xl font-semibold mb-8 text-purple-400">Edit Car Details</h2>
+
+    <form class="space-y-6 bg-gray-800 rounded-lg p-8 shadow-lg" action="#" method="post" enctype="multipart/form-data">
+
+      <div>
+        <label for="model" class="block mb-2 font-medium">Car Model</label>
+        <input
+          type="text"
+          id="model"
+          name="model"
+          value="Tesla Model 3"
+          required
+          class="w-full rounded bg-gray-700 border border-gray-600 p-3 text-white focus:outline-none focus:border-purple-400"
+        />
+      </div>
+
+      <div>
+        <label for="specs" class="block mb-2 font-medium">Specifications</label>
+        <textarea
+          id="specs"
+          name="specs"
+          rows="4"
+          required
+          class="w-full rounded bg-gray-700 border border-gray-600 p-3 text-white focus:outline-none focus:border-purple-400 resize-none"
+        >Electric, 0-60 mph in 3.1 seconds, Autopilot</textarea>
+      </div>
+
+      <div>
+        <label for="rentalRate" class="block mb-2 font-medium">Rental Rate (per day in $)</label>
+        <input
+          type="number"
+          id="rentalRate"
+          name="rentalRate"
+          min="0"
+          step="0.01"
+          value="99.99"
+          required
+          class="w-full rounded bg-gray-700 border border-gray-600 p-3 text-white focus:outline-none focus:border-purple-400"
+        />
+      </div>
+
+      <div>
+        <label for="availability" class="block mb-2 font-medium">Availability</label>
+        <select
+          id="availability"
+          name="availability"
+          required
+          class="w-full rounded bg-gray-700 border border-gray-600 p-3 text-white focus:outline-none focus:border-purple-400"
+        >
+          <option value="available" selected>Available</option>
+          <option value="rented">Rented</option>
+          <option value="maintenance">Under Maintenance</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="carImage" class="block mb-2 font-medium">Upload Car Image</label>
+        <input
+          type="file"
+          id="carImage"
+          name="carImage"
+          accept="image/*"
+          class="w-full text-gray-300"
+        />
+      </div>
+
+      <div class="flex justify-between mt-8">
+        <a href="/edit-cars.html" class="px-6 py-3 bg-gray-700 hover:bg-gray-600 rounded font-semibold transition text-white">Cancel</a>
+        <button
+          type="submit"
+          class="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded shadow font-semibold transition"
+        >
+          Save Changes
+        </button>
+      </div>
+
+    </form>
+  </main>
+
+  <footer class="bg-gray-900 mt-16 px-6 py-6 text-center text-gray-400 text-sm">
+    &copy; 2025 Admin Dashboard. All rights reserved.
+  </footer>
+
+</body>
+</html>

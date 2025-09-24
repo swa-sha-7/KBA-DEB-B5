@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Rental Service - Home</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="text-white bg-black">
+
+    <!-- Navbar -->
+    <nav class="bg-gray-900 px-6 py-4 flex justify-between items-center shadow">
+        <h1 class="text-2xl font-bold text-purple-400">Car Rental</h1>
+        <ul class="flex space-x-6 text-sm font-medium">
+            <li><a href="/Home.html" class="hover:text-purple-400 transition">Home</a></li>
+            <li><a href="#" class="hover:text-purple-400 transition">About Us</a></li>
+            <li><a href="#" class="hover:text-purple-400 transition">Contact</a></li>
+            <li><a href="/Login.html" class="hover:text-purple-400 transition">Sign In</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative bg-cover bg-center h-[85vh]" style="background-image: url('/bgimg/bg4.jpg');">
+        <div class="absolute inset-0 bg-black/60 flex flex-col justify-center items-center text-center px-4">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4">Rent Your Dream Car Today</h2>
+            <p class="max-w-xl text-gray-200 mb-6">Premium cars at affordable prices. Easy booking and 24/7 customer support.</p>
+            <a href="CarCatalog.html" class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded shadow-lg font-medium transition">Book Now</a>
+        </div>
+    </section>
+
+  <!-- Featured Cars -->
+  <section class="bg-gray-900 py-10 px-6 text-center">
+    <h3 class="text-3xl font-semibold mb-6 text-purple-400">Featured Cars</h3>
+    <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      <div class="bg-gray-800 rounded-lg p-4">
+        <img src="/cars/mercedes.jpg" alt="Car 1" class="rounded mb-4 w-full h-40 object-cover">
+        <h4 class="text-lg font-semibold">Mercedes C-Class</h4>
+        <p class="text-gray-400">Luxury, Comfort, and Speed</p>
+      </div>
+      <div class="bg-gray-800 rounded-lg p-4">
+        <img src="/cars/bmw.jpg" alt="Car 2" class="rounded mb-4 w-full h-40 object-cover">
+        <h4 class="text-lg font-semibold">BMW 3 Series</h4>
+        <p class="text-gray-400">Performance with Style</p>
+      </div>
+      <div class="bg-gray-800 rounded-lg p-4">
+        <img src="/cars/audi.jpg" alt="Car 3" class="rounded mb-4 w-full h-40 object-cover">
+        <h4 class="text-lg font-semibold">Audi A4</h4>
+        <p class="text-gray-400">Sleek and Smooth Rides</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 mt-10 px-6 pt-10 pb-6">
+    <div class="grid md:grid-cols-3 gap-8 text-sm">
+
+      <!-- Helpful Links -->
+      <div>
+        <h4 class="text-purple-400 text-lg mb-4">Helpful Links</h4>
+        <ul class="space-y-2">
+          <li><a href="/Home.html" class="hover:text-purple-400">Home</a></li>
+          <li><a href="#" class="hover:text-purple-400">About Us</a></li>
+          <li><a href="#" class="hover:text-purple-400">Contact</a></li>
+          <li><a href="/Register.html" class="hover:text-purple-400">Register</a></li>
+        </ul>
+      </div>
+
+      <!-- Get in Touch -->
+      <div>
+        <h4 class="text-purple-400 text-lg mb-4">Get in Touch</h4>
+        <ul class="space-y-3 ">
+          <li class="flex gap-4"><img src="/icons/location.png" alt="location" class="rounded h-4 bg-white"> 123 City Road, Trivandrum, India</li>
+          <li class="flex gap-4"><img src="/icons/email.png" alt="location" class="rounded h-4 bg-white"> support@carrental.com</li>
+          <li class="flex gap-4"><img src="/icons/phone-call.png" alt="location" class="rounded h-4 bg-white"> +91 98765 43210</li>
+        </ul>
+      </div>
+
+      <!-- Follow Us -->
+      <div>
+        <h4 class="text-purple-400 text-lg mb-4">Follow Us</h4>
+        <div class="flex space-x-5">
+            <img alt="fbicon" class="rounded mb-4 h-5 bg-white object-cover" src="/icons/facebook.png">
+            <img alt="igicon" class="rounded mb-4 h-5 bg-white object-cover" src="/icons/instagram.png">
+            <img alt="twicon" class="rounded mb-4 h-5 bg-white object-cover" src="/icons/twitter.png">
+            <img alt="yticon" class="rounded mb-4 h-5 bg-white object-cover" src="/icons/youtube.png">
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Bottom Footer -->
+  <div class="bg-gray-800 text-center text-sm py-4 text-gray-400">
+    &copy; 2025 Car Rental. All rights reserved.
+  </div>
+
+</body>
+</html>

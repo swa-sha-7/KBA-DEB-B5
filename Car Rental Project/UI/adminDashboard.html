@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white font-sans">
+
+  <!-- Navbar -->
+  <nav class="bg-gray-900 px-6 py-4 flex justify-between items-center shadow">
+    <h1 class="text-2xl font-bold text-purple-400">Admin Dashboard</h1>
+    <ul class="flex space-x-6 text-sm font-medium">
+      <li><a href="/" class="hover:text-purple-400 transition">Home</a></li>
+      <li><a href="/add-car" class="hover:text-purple-400 transition">Add Car</a></li>
+      <li><a href="/edit-cars" class="hover:text-purple-400 transition">Edit Cars</a></li>
+      <li><a href="/manage-users" class="hover:text-purple-400 transition">Users</a></li>
+      <li><a href="/settings" class="hover:text-purple-400 transition">Settings</a></li>
+      <li><a href="/logout" class="hover:text-purple-400 transition">Logout</a></li>
+    </ul>
+  </nav>
+
+  <!-- Dashboard Links -->
+  <main class="max-w-6xl mx-auto px-6 py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+
+    <a href="/add-car" class="block bg-gray-800 rounded-lg p-8 shadow-lg hover:shadow-purple-500 transition text-center">
+      <h2 class="text-2xl font-semibold mb-2 text-purple-400">Add New Car</h2>
+      <p class="text-gray-400">Go to the form page to add a new car to the inventory.</p>
+    </a>
+
+    <a href="/edit-cars" class="block bg-gray-800 rounded-lg p-8 shadow-lg hover:shadow-purple-500 transition text-center">
+      <h2 class="text-2xl font-semibold mb-2 text-purple-400">Edit / Update Cars</h2>
+      <p class="text-gray-400">View and modify existing car details.</p>
+    </a>
+
+    <a href="/manage-users" class="block bg-gray-800 rounded-lg p-8 shadow-lg hover:shadow-purple-500 transition text-center">
+      <h2 class="text-2xl font-semibold mb-2 text-purple-400">User Management</h2>
+      <p class="text-gray-400">Manage users and their roles.</p>
+    </a>
+
+    <a href="/settings" class="block bg-gray-800 rounded-lg p-8 shadow-lg hover:shadow-purple-500 transition text-center">
+      <h2 class="text-2xl font-semibold mb-2 text-purple-400">Settings</h2>
+      <p class="text-gray-400">Configure application preferences.</p>
+    </a>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 mt-10 px-6 pt-10 pb-6 text-center text-gray-400 text-sm">
+    &copy; 2025 Admin Dashboard. All rights reserved.
+  </footer>
+
+</body>
+</html>

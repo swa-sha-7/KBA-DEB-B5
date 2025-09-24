@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Car Catalog</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-900 text-white">
+
+  <!-- Navbar -->
+  <nav class="bg-gray-800 px-6 py-4 flex justify-between items-center shadow">
+    <h1 class="text-2xl font-bold text-purple-400">Car Catalog</h1>
+    <ul class="flex space-x-6 text-sm font-medium">
+      <li><a href="/Home.html" class="hover:text-purple-400">Home</a></li>
+      <li><a href="/CarCatalog.html" class="hover:text-purple-400">Catalog</a></li>
+      <li><a href="#" class="hover:text-purple-400">Contact</a></li>
+      <li><a href="/Login.html" class="hover:text-purple-400">Login</a></li>
+    </ul>
+  </nav>
+
+  <!-- Filters -->
+  <section class="p-6 bg-gray-900">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-4">
+      
+      <!-- Search -->
+      <div class="col-span-1 md:col-span-2">
+        <input type="text" placeholder="Search by model..." class="w-full px-4 py-2 rounded bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500" />
+      </div>
+
+      <!-- Price -->
+      <select class="w-full px-4 py-2 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-purple-500">
+        <option selected disabled>Filter by Price</option>
+        <option>Below ₹2000/day</option>
+        <option>₹2000 - ₹4000/day</option>
+        <option>₹4000 - ₹6000/day</option>
+        <option>Above ₹6000/day</option>
+      </select>
+
+      <!-- Location -->
+      <select class="w-full px-4 py-2 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-purple-500">
+        <option selected disabled>Filter by Location</option>
+        <option>Chennai</option>
+        <option>Bangalore</option>
+        <option>Mumbai</option>
+        <option>Delhi</option>
+      </select>
+
+    </div>
+  </section>
+
+  <!-- Car Cards Grid -->
+  <section class="py-10 px-6 max-w-7xl mx-auto">
+    <h2 class="text-3xl font-semibold text-purple-400 mb-6">Available Cars</h2>
+    
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+      <!-- Card 1 -->
+      <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg flex flex-col justify-between">
+        <img src="/cars/mercedes.jpg" alt="Car 1" class="h-40 w-full object-cover" />
+        <div class="p-4">
+          <h3 class="text-lg font-semibold mb-1">Mercedes C-Class</h3>
+          <p class="text-sm text-gray-400 mb-2">Location: Chennai</p>
+          <p class="text-purple-400 font-bold text-sm">₹4500/day</p>
+        </div>
+        <div class="p-4 pt-0">
+            <a href="/CarBooking.html" class="inline-block w-full bg-purple-600 hover:bg-purple-700 text-white text-center py-2 rounded font-medium transition">Book Now</a>
+          </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg flex flex-col justify-between">
+        <img src="/cars/bmw.jpg" alt="Car 2" class="h-40 w-full object-cover" />
+        <div class="p-4">
+          <h3 class="text-lg font-semibold mb-1">BMW 3 Series</h3>
+          <p class="text-sm text-gray-400 mb-2">Location: Bangalore</p>
+          <p class="text-purple-400 font-bold text-sm">₹5000/day</p>
+        </div>
+        <div class="p-4 pt-0">
+            <a href="/CarBooking.html" class="inline-block w-full bg-purple-600 hover:bg-purple-700 text-white text-center py-2 rounded font-medium transition">Book Now</a>
+          </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg flex flex-col justify-between">
+        <img src="/cars/audi.jpg" alt="Car 3" class="h-40 w-full object-cover" />
+        <div class="p-4">
+          <h3 class="text-lg font-semibold mb-1">Audi A4</h3>
+          <p class="text-sm text-gray-400 mb-2">Location: Mumbai</p>
+          <p class="text-purple-400 font-bold text-sm">₹4200/day</p>
+        </div>
+        <div class="p-4 pt-0">
+            <a href="/CarBooking.html" class="inline-block w-full bg-purple-600 hover:bg-purple-700 text-white text-center py-2 rounded font-medium transition">Book Now</a>
+          </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg flex flex-col justify-between">
+        <img src="/cars/toyota.jpg" alt="Car 4" class="h-40 w-full object-cover" />
+        <div class="p-4">
+          <h3 class="text-lg font-semibold mb-1">Toyota Camry</h3>
+          <p class="text-sm text-gray-400 mb-2">Location: Delhi</p>
+          <p class="text-purple-400 font-bold text-sm">₹3200/day</p>
+        </div>
+        <div class="p-4 pt-0">
+            <a href="/CarBooking.html" class="inline-block w-full bg-purple-600 hover:bg-purple-700 text-white text-center py-2 rounded font-medium transition">Book Now</a>
+          </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-gray-400 py-6 text-sm text-center">
+    © 2025 Car Rental. All rights reserved.
+  </footer>
+
+</body>
+</html>

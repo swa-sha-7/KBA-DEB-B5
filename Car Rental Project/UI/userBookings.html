@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Bookings</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white">
+
+  <!-- Navbar -->
+  <nav class="bg-gray-800 px-6 py-4 flex justify-between items-center shadow">
+    <h1 class="text-2xl font-bold text-purple-400">My Bookings</h1>
+    <ul class="flex space-x-6 text-sm font-medium">
+      <li><a href="#" class="hover:text-purple-400">Home</a></li>
+      <li><a href="#" class="hover:text-purple-400">Catalog</a></li>
+      <li><a href="#" class="hover:text-purple-400">Booking</a></li>
+      <li><a href="#" class="hover:text-purple-400">Logout</a></li>
+    </ul>
+  </nav>
+
+  <!-- My Bookings -->
+  <section class="max-w-5xl mx-auto py-10 px-6">
+    <h2 class="text-3xl font-semibold text-purple-400 mb-8">Your Booked Cars</h2>
+
+    <!-- Booking Card 1 -->
+    <div class="bg-gray-800 rounded-lg shadow-lg mb-6 overflow-hidden">
+      <div class="md:flex">
+        <img src="car1.jpg" alt="Mercedes" class="h-48 w-full md:w-1/3 object-cover" />
+        <div class="p-6 flex flex-col justify-between w-full">
+          <div>
+            <h3 class="text-xl font-bold text-white mb-1">Mercedes C-Class</h3>
+            <p class="text-sm text-gray-300 mb-1">Location: Chennai</p>
+            <p class="text-sm text-gray-300 mb-1">Booked from: <span class="text-white">2025-08-01</span> to <span class="text-white">2025-08-05</span></p>
+            <p class="text-sm text-gray-300 mb-1">Rate: ₹4500/day</p>
+            <p class="text-sm text-gray-300 mb-2">Total Cost: <span class="text-purple-400 font-semibold">₹22,500</span></p>
+          </div>
+          <div class="text-sm text-green-400 font-medium mt-2">Status: Confirmed</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Booking Card 2 -->
+    <!-- Booking Card with Cancel Button -->
+<div class="bg-gray-800 rounded-lg shadow-lg mb-6 overflow-hidden">
+    <div class="md:flex">
+      <img src="car2.jpg" alt="BMW" class="h-48 w-full md:w-1/3 object-cover" />
+      <div class="p-6 flex flex-col justify-between w-full">
+        <div>
+          <h3 class="text-xl font-bold text-white mb-1">BMW 3 Series</h3>
+          <p class="text-sm text-gray-300 mb-1">Location: Bangalore</p>
+          <p class="text-sm text-gray-300 mb-1">Booked from: <span class="text-white">2025-09-10</span> to <span class="text-white">2025-09-13</span></p>
+          <p class="text-sm text-gray-300 mb-1">Rate: ₹5000/day</p>
+          <p class="text-sm text-gray-300 mb-2">Total Cost: <span class="text-purple-400 font-semibold">₹15,000</span></p>
+          <p class="text-sm text-yellow-400 font-medium">Status: Upcoming</p>
+        </div>
+        <!-- Cancel Button -->
+        <div class="mt-4 text-right">
+          <button class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded transition text-sm font-medium">
+            Cancel Booking
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+    <!-- If no bookings -->
+    <!-- <p class="text-gray-400 text-center mt-10">You have no bookings yet.</p> -->
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-center text-sm py-4 text-gray-400 mt-10">
+    &copy; 2025 Car Rental. All rights reserved.
+  </footer>
+
+</body>
+</html>

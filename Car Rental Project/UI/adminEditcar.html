@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Edit Cars</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white font-sans">
+
+  <!-- Navbar -->
+  <nav class="bg-gray-900 px-6 py-4 flex justify-between items-center shadow">
+    <h1 class="text-2xl font-bold text-purple-400">Admin Dashboard</h1>
+    <ul class="flex space-x-6 text-sm font-medium">
+      <li><a href="/dashboard.html" class="hover:text-purple-400 transition">Dashboard</a></li>
+      <li><a href="/add-car.html" class="hover:text-purple-400 transition">Add Car</a></li>
+      <li><a href="/manage-users.html" class="hover:text-purple-400 transition">Users</a></li>
+      <li><a href="/settings.html" class="hover:text-purple-400 transition">Settings</a></li>
+      <li><a href="/logout" class="hover:text-purple-400 transition">Logout</a></li>
+    </ul>
+  </nav>
+
+  <main class="max-w-6xl mx-auto px-6 py-10">
+    <h2 class="text-3xl font-semibold mb-8 text-purple-400">Edit / Delete Cars</h2>
+
+    <!-- Sample car card -->
+    <div class="space-y-6">
+      <div class="bg-gray-800 rounded-lg p-6 shadow hover:shadow-purple-500 transition flex flex-col md:flex-row md:justify-between md:items-center">
+        <div>
+          <h3 class="text-xl font-semibold text-purple-400">Tesla Model 3</h3>
+          <p class="text-gray-400 mb-2">Electric, 0-60 mph in 3.1 seconds, Autopilot</p>
+          <p class="mb-2">Rental Rate: $99.99</p>
+          <p>Availability: <span class="capitalize">Available</span></p>
+        </div>
+        <div class="mt-4 md:mt-0 space-x-4">
+          <a href="/edit-car-form.html?car=tesla-model-3" class="text-purple-400 hover:text-purple-600 font-semibold transition">Edit</a>
+          <button class="text-red-500 hover:text-red-600 font-semibold transition">Delete</button>
+        </div>
+      </div>
+
+      <div class="bg-gray-800 rounded-lg p-6 shadow hover:shadow-purple-500 transition flex flex-col md:flex-row md:justify-between md:items-center">
+        <div>
+          <h3 class="text-xl font-semibold text-purple-400">BMW 5 Series</h3>
+          <p class="text-gray-400 mb-2">Luxury sedan, 2.9L engine, Sport mode</p>
+          <p class="mb-2">Rental Rate: $120.50</p>
+          <p>Availability: <span class="capitalize">Rented</span></p>
+        </div>
+        <div class="mt-4 md:mt-0 space-x-4">
+          <a href="/edit-car-form.html?car=bmw-5-series" class="text-purple-400 hover:text-purple-600 font-semibold transition">Edit</a>
+          <button class="text-red-500 hover:text-red-600 font-semibold transition">Delete</button>
+        </div>
+      </div>
+
+      <div class="bg-gray-800 rounded-lg p-6 shadow hover:shadow-purple-500 transition flex flex-col md:flex-row md:justify-between md:items-center">
+        <div>
+          <h3 class="text-xl font-semibold text-purple-400">Audi Q7</h3>
+          <p class="text-gray-400 mb-2">SUV, Quattro AWD, Premium sound</p>
+          <p class="mb-2">Rental Rate: $130.00</p>
+          <p>Availability: <span class="capitalize">Under Maintenance</span></p>
+        </div>
+        <div class="mt-4 md:mt-0 space-x-4">
+          <a href="/edit-car-form.html?car=audi-q7" class="text-purple-400 hover:text-purple-600 font-semibold transition">Edit</a>
+          <button class="text-red-500 hover:text-red-600 font-semibold transition">Delete</button>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="bg-gray-900 mt-16 px-6 py-6 text-center text-gray-400 text-sm">
+    &copy; 2025 Admin Dashboard. All rights reserved.
+  </footer>
+
+</body>
+</html>

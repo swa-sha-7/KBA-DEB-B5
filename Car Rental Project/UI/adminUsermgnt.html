@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Booking Management</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white font-sans">
+
+  <!-- Navbar -->
+  <nav class="bg-gray-900 px-6 py-4 flex justify-between items-center shadow">
+    <h1 class="text-2xl font-bold text-purple-400">Admin Dashboard</h1>
+    <ul class="flex space-x-6 text-sm font-medium">
+      <li><a href="/dashboard.html" class="hover:text-purple-400 transition">Dashboard</a></li>
+      <li><a href="/add-car.html" class="hover:text-purple-400 transition">Add Car</a></li>
+      <li><a href="/edit-cars.html" class="hover:text-purple-400 transition">Edit Cars</a></li>
+      <li><a href="/manage-bookings.html" class="text-purple-400 font-semibold">Bookings</a></li>
+      <li><a href="/logout" class="hover:text-purple-400 transition">Logout</a></li>
+    </ul>
+  </nav>
+
+  <!-- Booking Management Section -->
+  <main class="max-w-7xl mx-auto px-6 py-10">
+    <h2 class="text-3xl font-semibold mb-8 text-purple-400">Booking Management</h2>
+
+    <!-- Booking Table -->
+    <div class="overflow-x-auto">
+      <table class="min-w-full bg-gray-800 text-sm rounded-lg overflow-hidden">
+        <thead class="bg-gray-700 text-gray-300 text-left">
+          <tr>
+            <th class="px-4 py-3">Booking ID</th>
+            <th class="px-4 py-3">Customer Name</th>
+            <th class="px-4 py-3">Car Model</th>
+            <th class="px-4 py-3">From</th>
+            <th class="px-4 py-3">To</th>
+            <th class="px-4 py-3">Status</th>
+            <th class="px-4 py-3 text-center">Actions</th>
+          </tr>
+        </thead>
+        <tbody class="text-white divide-y divide-gray-700">
+          <tr class="hover:bg-gray-700">
+            <td class="px-4 py-3">BK001</td>
+            <td class="px-4 py-3">John Doe</td>
+            <td class="px-4 py-3">Tesla Model 3</td>
+            <td class="px-4 py-3">2025-08-01</td>
+            <td class="px-4 py-3">2025-08-05</td>
+            <td class="px-4 py-3 text-green-400">Pending</td>
+            <td class="px-4 py-3 flex justify-center space-x-2">
+              <button class="bg-green-600 hover:bg-green-700 text-white px-3 py-1 rounded text-xs">Approve</button>
+              <button class="bg-red-600 hover:bg-red-700 text-white px-3 py-1 rounded text-xs">Reject</button>
+              <a href="#" class="text-purple-400 hover:underline text-xs">Details</a>
+            </td>
+          </tr>
+
+          <tr class="hover:bg-gray-700">
+            <td class="px-4 py-3">BK002</td>
+            <td class="px-4 py-3">Priya R.</td>
+            <td class="px-4 py-3">BMW 5 Series</td>
+            <td class="px-4 py-3">2025-08-10</td>
+            <td class="px-4 py-3">2025-08-15</td>
+            <td class="px-4 py-3 text-yellow-400">Approved</td>
+            <td class="px-4 py-3 flex justify-center space-x-2">
+              <button class="bg-red-600 hover:bg-red-700 text-white px-3 py-1 rounded text-xs">Cancel</button>
+              <a href="#" class="text-purple-400 hover:underline text-xs">Details</a>
+            </td>
+          </tr>
+
+          <tr class="hover:bg-gray-700">
+            <td class="px-4 py-3">BK003</td>
+            <td class="px-4 py-3">Ahmed K.</td>
+            <td class="px-4 py-3">Audi Q7</td>
+            <td class="px-4 py-3">2025-07-20</td>
+            <td class="px-4 py-3">2025-07-25</td>
+            <td class="px-4 py-3 text-red-400">Rejected</td>
+            <td class="px-4 py-3 flex justify-center space-x-2">
+              <a href="#" class="text-purple-400 hover:underline text-xs">Details</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer class="bg-gray-900 mt-16 px-6 py-6 text-center text-gray-400 text-sm">
+    &copy; 2025 Admin Dashboard. All rights reserved.
+  </footer>
+
+</body>
+</html>

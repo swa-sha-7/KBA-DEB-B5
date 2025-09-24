@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Car Booking</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-900 text-white">
+
+  <!-- Navbar -->
+  <nav class="bg-gray-800 px-6 py-4 flex justify-between items-center shadow">
+    <h1 class="text-2xl font-bold text-purple-400">Car Booking</h1>
+    <ul class="flex space-x-6 text-sm font-medium">
+      <li><a href="/Home.html" class="hover:text-purple-400">Home</a></li>
+      <li><a href="/CarCatalog.html" class="hover:text-purple-400">Catalog</a></li>
+      <li><a href="#" class="hover:text-purple-400">Contact</a></li>
+      <li><a href="/Login.html" class="hover:text-purple-400">Login</a></li>
+    </ul>
+  </nav>
+
+  <section class="max-w-3xl mx-auto py-10 px-6">
+
+    <!-- Selected Car Card -->
+    <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden mb-8">
+        <img src="/cars/mercedes.jpg" alt="Selected Car" class="w-full h-60 object-cover" />
+        
+        <div class="p-6 space-y-2">
+            <h2 class="text-2xl font-semibold text-purple-400">Mercedes C-Class</h2>
+            <p class="text-gray-300 text-sm">Location: Chennai</p>
+            <p class="text-sm text-gray-400">Experience unmatched comfort and performance with the Mercedes C-Class. Ideal for city and highway drives.</p>
+            
+            <ul class="text-sm text-gray-300 space-y-1 mt-2">
+              <li><span class="font-medium text-white">Fuel:</span> Diesel</li>
+              <li><span class="font-medium text-white">Transmission:</span> Automatic</li>
+              <li><span class="font-medium text-white">Seats:</span> 5</li>
+              <li><span class="font-medium text-white">Availability:</span> Available</li>
+            </ul>
+          
+          <p class="text-purple-400 font-bold text-lg mt-2">₹4500/day</p>
+        </div>
+    </div>
+
+    <!-- Booking Form -->
+    <form class="bg-gray-800 p-6 rounded-lg shadow-lg space-y-6">
+
+      <h3 class="text-xl font-semibold text-purple-400 mb-2">Booking Details</h3>
+
+      <!-- Rental Dates -->
+      <div class="grid md:grid-cols-2 gap-4">
+        <div>
+          <label class="block mb-1 text-sm font-medium">Start Date <span class="text-red-500">*</span></label>
+          <input type="date" class="w-full px-4 py-2 bg-gray-700 text-white rounded focus:outline-none focus:ring-2 focus:ring-purple-500" required />
+        </div>
+        <div>
+          <label class="block mb-1 text-sm font-medium">End Date <span class="text-red-500">*</span></label>
+          <input type="date" class="w-full px-4 py-2 bg-gray-700 text-white rounded focus:outline-none focus:ring-2 focus:ring-purple-500" required />
+        </div>
+      </div>
+
+      <!-- Total Cost Placeholder -->
+      <div>
+        <label class="block mb-1 text-sm font-medium">Estimated Total Cost</label>
+        <input type="text" value="₹0.00" class="w-full px-4 py-2 bg-gray-700 text-white rounded" readonly />
+        <p class="text-sm text-gray-400 mt-1">*Calculated based on rental duration and rate ₹4500/day.</p>
+      </div>
+
+      <!-- Submit -->
+      <div class="text-right">
+        <button type="submit" class="bg-purple-600 hover:bg-purple-700 px-6 py-2 rounded text-white font-semibold transition">Confirm Booking</button>
+      </div>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-center text-sm py-4 text-gray-400 mt-10">
+    &copy; 2025 Car Rental. All rights reserved.
+  </footer>
+
+</body>
+</html>
